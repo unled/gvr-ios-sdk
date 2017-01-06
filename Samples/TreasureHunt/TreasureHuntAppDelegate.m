@@ -4,7 +4,9 @@
 
 #import "TreasureHuntAppDelegate.h"
 
-#import "TreasureHuntViewController.h"
+// #import "TreasureHuntViewController.h"
+
+#import "TreasureHunt-Swift.h"
 
 @interface TreasureHuntAppDelegate ()<UINavigationControllerDelegate>
 

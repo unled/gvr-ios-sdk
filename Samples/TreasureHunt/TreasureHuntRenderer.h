@@ -12,7 +12,10 @@
 /** TreasureHunt renderer. */
 @interface TreasureHuntRenderer : NSObject<GVRCardboardViewDelegate>
 
+@property (nonatomic, assign) GLKQuaternion quaternion;
 @property(nonatomic, weak) id<TreasureHuntRendererDelegate> delegate;
+
+- (void)spawnCube;
 
 @end
 

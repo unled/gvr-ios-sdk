@@ -410,6 +410,14 @@ static bool checkProgramLinkStatus(GLuint shader_program) {
   const GLuint grid_fragment_shader = LoadShader(GL_FRAGMENT_SHADER, kGridFragmentShaderString);
   NSAssert(grid_fragment_shader != 0, @"Failed to load grid fragment shader");
 
+    
+    
+    ////// Draw the pointer?
+    
+    
+    
+    
+    
   /////// Create the program object for the cube.
 
   _cube_program = glCreateProgram();
@@ -542,6 +550,12 @@ static bool checkProgramLinkStatus(GLuint shader_program) {
   glEnable(GL_SCISSOR_TEST);
 }
 
+/**
+ * Called on each frame to perform the required GL rendering. Delegate should set the GL viewport
+ * and scissor it to the viewport returned from the GVRHeadTransform::viewportForEye: method.
+ * This method is called on the GL thread.
+ */
+
 - (void)cardboardView:(GVRCardboardView *)cardboardView
               drawEye:(GVREye)eye
     withHeadTransform:(GVRHeadTransform *)headTransform {
@@ -669,9 +683,21 @@ static bool checkProgramLinkStatus(GLuint shader_program) {
   const float azimuth = (float)(drand48() * kMaxCubeAzimuthRadians);
   const float elevation = (float)(2.0 * drand48() * kMaxCubeElevationRadians) -
                           kMaxCubeElevationRadians;
-  _cube_position[0] = -cos(elevation) * sin(azimuth) * distance;
-  _cube_position[1] = sin(elevation) * distance;
-  _cube_position[2] = -cos(elevation) * cos(azimuth) * distance;
+//  _cube_position[0] = -cos(elevation) * sin(azimuth) * distance;
+//  _cube_position[1] = sin(elevation) * distance;
+//  _cube_position[2] = -cos(elevation) * cos(azimuth) * distance;
+    
+    // MARK: SAID: Cube Positions
+    
+    // +right, -left
+    _cube_position[0] = 10.0 * -self.quaternion.y;
+    
+    // +up, -down
+    _cube_position[1] = 10.0 * self.quaternion.x;
+    
+    // +behind, -front
+    _cube_position[2] = -10.0;
+
 }
 
 // Returns whether the object is currently on focus.
