@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TreasureHuntRenderer.m"
-            timestampString = "505370828.719918"
+            timestampString = "505581297.333084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "696"
-            endingLineNumber = "696"
+            startingLineNumber = "702"
+            endingLineNumber = "702"
             landmarkName = "-setRandomCubePosition:maxLimit:"
             landmarkType = "7">
          </BreakpointContent>

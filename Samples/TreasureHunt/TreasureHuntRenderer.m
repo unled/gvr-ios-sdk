@@ -579,6 +579,9 @@ static bool checkProgramLinkStatus(GLuint shader_program) {
 }
 
 - (void)renderWithModelViewProjectionMatrix:(const float *)model_view_matrix {
+    
+    // MARK: Position Cube
+    
   // Select our shader.
   glUseProgram(_cube_program);
 
@@ -606,6 +609,9 @@ static bool checkProgramLinkStatus(GLuint shader_program) {
   glDisableVertexAttribArray(_cube_vertex_attrib);
   glDisableVertexAttribArray(_cube_color_attrib);
 
+    
+  // MARK: Position Floor
+    
   // Select our shader.
   glUseProgram(_grid_program);
 
@@ -679,15 +685,15 @@ static bool checkProgramLinkStatus(GLuint shader_program) {
 // Sets a new position for the cube.
 - (void)setRandomCubePosition:(float)min maxLimit:(float)max {
   // Choose random spherical coordinates to set the new position.
-  const float distance = min + (float)((max - min) * drand48());
-  const float azimuth = (float)(drand48() * kMaxCubeAzimuthRadians);
-  const float elevation = (float)(2.0 * drand48() * kMaxCubeElevationRadians) -
-                          kMaxCubeElevationRadians;
+//  const float distance = min + (float)((max - min) * drand48());
+//  const float azimuth = (float)(drand48() * kMaxCubeAzimuthRadians);
+//  const float elevation = (float)(2.0 * drand48() * kMaxCubeElevationRadians) -
+//                          kMaxCubeElevationRadians;
 //  _cube_position[0] = -cos(elevation) * sin(azimuth) * distance;
 //  _cube_position[1] = sin(elevation) * distance;
 //  _cube_position[2] = -cos(elevation) * cos(azimuth) * distance;
     
-    // MARK: SAID: Cube Positions
+    // MARK: Cube Positions
     
     // +right, -left
     _cube_position[0] = 10.0 * -self.quaternion.y;

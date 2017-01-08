@@ -1,6 +1,5 @@
 #import "GVRCardboardView.h"
 
-/** TreasureHunt renderer delegate. */
 @protocol TreasureHuntRendererDelegate <NSObject>
 @optional
 
@@ -9,7 +8,6 @@
 
 @end
 
-/** TreasureHunt renderer. */
 @interface TreasureHuntRenderer : NSObject<GVRCardboardViewDelegate>
 
 @property (nonatomic, assign) GLKQuaternion quaternion;

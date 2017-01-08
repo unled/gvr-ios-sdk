@@ -15,6 +15,7 @@
 		12BEE9C81C8F546B002F8361 /* launch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12BEE9C61C8F546B002F8361 /* launch.xib */; };
 		12BEE9CB1C8F54B8002F8361 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BEE9CA1C8F54B8002F8361 /* main.m */; };
 		AAF7D18D8C8C66FA989FEB1C /* libPods-TreasureHunt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DB380700A3BD29352E8A9B7 /* libPods-TreasureHunt.a */; };
+		EA29ADA91E2290AB0094EA3A /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29ADA81E2290AB0094EA3A /* Ball.swift */; };
 		EA3B15041E1F060100644C87 /* TreasureHuntViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3B15031E1F060100644C87 /* TreasureHuntViewController.swift */; };
 		EAEFAE301E1CA6D800F1B71F /* DaydreamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEFAE2F1E1CA6D800F1B71F /* DaydreamController.swift */; };
 		EAEFAE321E1CA6F400F1B71F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEFAE311E1CA6F400F1B71F /* CoreBluetooth.framework */; };
@@ -38,6 +39,7 @@
 		12BEE9CA1C8F54B8002F8361 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		3E2B6DCC857947E6F7DE7FFA /* Pods-TreasureHunt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureHunt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureHunt/Pods-TreasureHunt.debug.xcconfig"; sourceTree = "<group>"; };
 		9B5D5F8D0FF6B015AC91699A /* Pods-TreasureHunt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TreasureHunt.release.xcconfig"; path = "Pods/Target Support Files/Pods-TreasureHunt/Pods-TreasureHunt.release.xcconfig"; sourceTree = "<group>"; };
+		EA29ADA81E2290AB0094EA3A /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = SOURCE_ROOT; };
 		EA3B15031E1F060100644C87 /* TreasureHuntViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreasureHuntViewController.swift; sourceTree = SOURCE_ROOT; };
 		EAEFAE2E1E1CA6D700F1B71F /* TreasureHunt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreasureHunt-Bridging-Header.h"; sourceTree = "<group>"; };
 		EAEFAE2F1E1CA6D800F1B71F /* DaydreamController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaydreamController.swift; sourceTree = "<group>"; };
@@ -79,7 +81,8 @@
 		12BEE9A01C8F53AB002F8361 /* TreasureHunt */ = {
 			isa = PBXGroup;
 			children = (
-				EA3B15051E1F0DC300644C87 /* ObjC */,
+				EA3B15051E1F0DC300644C87 /* Unused */,
+				EA29ADA71E2290910094EA3A /* Models */,
 				125D19BA1D875307003B793D /* cube_sound.wav */,
 				125D19BB1D875307003B793D /* success.wav */,
 				12BEE9C61C8F546B002F8361 /* launch.xib */,
@@ -122,13 +125,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA3B15051E1F0DC300644C87 /* ObjC */ = {
+		EA29ADA71E2290910094EA3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EA29ADA81E2290AB0094EA3A /* Ball.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EA3B15051E1F0DC300644C87 /* Unused */ = {
 			isa = PBXGroup;
 			children = (
 				12BEE9BE1C8F5426002F8361 /* TreasureHuntViewController.h */,
 				12BEE9BF1C8F5426002F8361 /* TreasureHuntViewController.m */,
 			);
-			name = ObjC;
+			name = Unused;
 			sourceTree = "<group>";
 		};
 		EAEFAE2D1E1CA6C500F1B71F /* Swift */ = {
@@ -268,6 +279,7 @@
 				12BEE9C21C8F5426002F8361 /* TreasureHuntRenderLoop.m in Sources */,
 				EAEFAE301E1CA6D800F1B71F /* DaydreamController.swift in Sources */,
 				122508B41C99FFC50092EC1B /* TreasureHuntRenderer.m in Sources */,
+				EA29ADA91E2290AB0094EA3A /* Ball.swift in Sources */,
 				EA3B15041E1F060100644C87 /* TreasureHuntViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
